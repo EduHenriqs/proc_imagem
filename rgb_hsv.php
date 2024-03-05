@@ -34,9 +34,40 @@
 
          }  
 
+        $r = $red/255;
+        $g = $green/255;
+        $b = $blue/255;
+
+        $cor_max = max($red, $green, $blue);
+        $cor_min = min($red, $green, $blue);
+
+        $delta = $cor_max - $cor_min;
+
+         $aux = ($cor_max + $cor_min) / 2;
+
+        if($delta == 0){
+            $hue = 0;
+            $saturacao = 0;
+        }else{
+
+            $saturacao = $delta /    (1 - abs(2 * $aux - 1));    
+
+            switch ($cor_max) {
+                case $red:
+                    $hue = 60 * fmod(($green - $blue) / $delta, 6);
+                    break;
+                case $green:
+                    $hue = 60 * (($blue - $red) / $delta + 2);
+                    break;
+                case $blue:
+                    $hue = 60 * (($red - $geen) / $delta + 4);
+                    break;
+        }
+
+        $valor = $aux;
 
     }
-
+    }
 
 ?>
 <div class='row'>
@@ -58,15 +89,15 @@
         <br>
         <h2>Result</h2>
         <label>Hue</label>
-        <input value="" class='form-control' disabled>
+        <input value="<?= round($hue)?>" class='form-control' disabled>
 
 
         <label>Saturarion</label>
-        <input value="" class='form-control' disabled>
+        <input value="<?= $saturacao?>" class='form-control' disabled>
 
 
         <label>Value</label>
-        <input value="" class='form-control' disabled>
+        <input value="<?= $valor?>" class='form-control' disabled>
 
 
         <label for="">Color Preview</label>
