@@ -16,7 +16,7 @@ if ($hue != '' and $saturacao != '' and $valor != '') {
     if (($hue >= 0 or $hue < 360) and ($saturacao <= 0 or $saturacao <= 1) and ($valor <= 0 or $valor <= 1)) {
 
         $c = $valor * $saturacao;
-        $h = $hue/100;
+        $h = $hue/60;
         //print  "c1: " . $c;
         $x =   $c * (1 - abs(fmod($h, 2) - 1));
  
@@ -55,8 +55,8 @@ if ($hue != '' and $saturacao != '' and $valor != '') {
         $green = ($g + $m) * 255;
         $blue = ($b + $m) * 255;
 
-        print $blue;
-
+        //print $blue;
+        $hex_comp = sprintf("#%02x%02x%02x", $red, $green, $blue);  
 
 
 

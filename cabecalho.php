@@ -44,10 +44,10 @@
           <a class="nav-link active" aria-current="page" href="hsv_rgb.php">HSV para RGB</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">RGB para CMYK</a>
+          <a class="nav-link active" aria-current="page" href="rgb_cmyk.php">RGB para CMYK</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">CMYK para RGB</a>
+          <a class="nav-link active" aria-current="page" href="cmyk_rgb.php">CMYK para RGB</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">RGB para GS</a> 
