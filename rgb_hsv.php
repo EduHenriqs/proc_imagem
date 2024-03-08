@@ -24,8 +24,7 @@
             $red = $_POST['red'];
             $green = $_POST['green'];
             $blue = $_POST['blue'];
-            $cores = array($_POST['red'], $_POST['green'], $_POST['blue']);
-            $hex_comp = sprintf("#%02x%02x%02x", $cores[0], $cores[1], $cores[2]);
+            $hex_comp = sprintf("#%02x%02x%02x", $red, $green, $blue);
             
 
          }  
