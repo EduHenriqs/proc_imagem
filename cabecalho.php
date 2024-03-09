@@ -50,7 +50,7 @@
           <a class="nav-link active" aria-current="page" href="cmyk_rgb.php">CMYK para RGB</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">RGB para GS</a> 
+          <a class="nav-link active" aria-current="page" href="rgb_gs.php">RGB para GS</a> 
         </li>
       </ul>
     </div>
